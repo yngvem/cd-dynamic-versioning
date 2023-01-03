@@ -21,3 +21,8 @@ jobs:
         run: poetry install
       - name: run tests
         run: poetry run pytest
+      - name: run linter
+        run: |
+          poetry run flake8 .
+          poetry run black --check .
+          poetry run isort -c .
