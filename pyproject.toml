@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "cd-dynamic-versioning"
+version = "0.0.0"
+description = "Testpackage for dynamic versioning"
+authors = ["Yngve Moe <yngve.m.moe@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "cd_dynamic_versioning"}]
+
+[tool.poetry.dependencies]
+python = ">= 3.8"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+strict = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
